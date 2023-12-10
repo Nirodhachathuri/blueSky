@@ -1,18 +1,17 @@
 runtime: python27
 api_version: 1
-threadsafe: yes
-
+threadsafe: true
 handlers:
-- url: /
-  static_files: dist/web/index.html
-  upload: dist/web/index.html
-- url: /
-  static_dir: dist/web
-
-skip files:
+  - url: /
+    static_files: dist/web/index.html
+    upload: dist/web/index.html
+  - url: /
+    static_dir: dist/web
+skip_files:
   - e2e/
   - node_modules/
   - src/
+  - coverage
   - ^(.*/)?\..*$
   - ^(.*/)?.*\.json$
   - ^(.*/)?.*\.md$
