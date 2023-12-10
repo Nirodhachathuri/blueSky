@@ -1,7 +1,13 @@
-.sticky {
+.container {
     position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 1000; /* Adjust the z-index as needed */
     /* Additional styling as per your requirement */
 }
+@media (max-width: 768px) {
+    .container {
+      background-color: #f0f0f0; /* Change background color for smaller devices */
+      font-size: 14px; /* Adjust font size for smaller devices */
+    }
+  }

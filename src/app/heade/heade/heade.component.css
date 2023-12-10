@@ -5,6 +5,7 @@
   padding-bottom: 3rem;
   background: rgb(213, 39, 12);
   font-family: 'Buenos Aires';
+  
   /* font-weight: bold; */
   /* overflow-x: hidden; */
   clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 110%, 0% 95%);
@@ -13,20 +14,20 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two columns */
-  gap: 50rem; /* Adjust the gap between columns */
+  gap: 46rem; /* Adjust the gap between columns */
   /* Center content vertically */
 }
 .containers {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two columns */
-  gap: 15rem; /* Adjust the gap between columns */
+  gap: 11rem; /* Adjust the gap between columns */
   /* Center content vertically */
 }
 
 .name {
   /* padding: 2rem; */
   color: rgb(251, 253, 253);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: lighter;
   /* margin-top: 3rem; */
   /* font-family: 'Gilroy'; */
