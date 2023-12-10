@@ -1,0 +1,61 @@
+<mat-card id="Home">
+    <mat-card-content class="row">
+      <div class="container d-flex align-items-start">
+        <div class="logo">
+          <div class="profile-bg">
+            <img src="../../assets/Bluesky-Immigration-Logo.svg" alt="">
+          </div>
+        </div>
+        <div class="name ml-3 mt-1">
+          <div style="text-align: center; font-weight: 20px;">Event Starts In</div>
+          <div style="font-size: small; text-align: center;">Days : Hours : Minutes : Seconds</div>
+          <div style="font-size: xx-large; text-align: center;">{{ days }} : {{ hours }} : {{ minutes }} : {{ seconds }}</div>
+
+        </div>
+      </div>
+      
+      
+      
+      <!-- Image Column -->  
+      <!-- Text Column -->
+    <div class="data d-flex align-items-center" style="margin-top: 100px; margin-left: 100px;" data-aos="fade-down">
+      <div class="containers ">
+        <span>
+          <span style="color: rgb(220, 234, 234); font-family: 'Buenos Aires'; font-size: x-large;margin-bottom: 300px;"> FREE </span> 
+          <span style="color: rgb(220, 234, 234); font-family: 'Buenos Aires';font-size: x-large;margin-top:300px;margin-bottom: 300px"> IELTS REALITY</span><br>
+          <span style="color: rgb(222, 244, 128); font-family: 'Buenos Aires';font-size: x-large;margin-top:300px;margin-bottom: 300px"> MOCK TEST</span><br>
+          <span style="color: rgb(220, 234, 234); font-family: 'Buenos Aires';font-size: x-large;margin-top:300px;margin-bottom: 300px;"> WITH MASTERY WORKSHOP</span><br>
+          <br><br><br><br>
+          <mat-icon style="color: rgb(232, 238, 238);">calendar_today</mat-icon> &nbsp;&nbsp;<!-- Calendar icon -->
+          <span style="color: rgb(228, 217, 217); font-size: x-large; font-family: 'Buenos Aires';"> Sun, 17<sup>th</sup> December 2023</span><br><br><br>
+          <span data-aos="fade-down">
+            <mat-icon style="color: rgb(249, 249, 251);">access_time</mat-icon>&nbsp;&nbsp; <!-- Clock icon -->
+            <span style="color: rgb(195, 185, 185);  font-family: 'Buenos Aires'; font-size: x-large;"> 10:00 am to 6:00 pm</span>
+          </span><br><br><br><br>
+          <span class="register-btn"><button (click)="toggleForm()">Register</button></span><br><br>
+        </span>
+        
+        <div class="text ml-3">
+          <img src="../../assets/images.avif" style="width: 500px;" alt="">
+        </div>
+      </div>
+
+    </div>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="popup-form" *ngIf="showForm" style="display: block;">
+    <form (ngSubmit)="submitForm()" class="form-container">
+      <!-- Your form fields go here -->
+      <label for="username">First Name:</label>
+      <input type="text" id="username" name="username" required [(ngModel)]="formData.username"><br><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required [(ngModel)]="formData.email">
+      
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  
+

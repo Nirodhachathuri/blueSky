@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Buenos Aires';
+    src: url('./BuenosAires-Regular.ttf') format('truetype');
+    /* Include other font formats if available */
+    font-weight: normal;
+    font-style: normal;
+  }

@@ -1,0 +1,16 @@
+<div id="industry">
+    
+    <h1 style="font-family: 'Buenos Aires'; font-weight: bold; text-align: center; font-size: xxx-large;padding-top: 80px;padding-bottom: 120px;">Why Do You Choose Us?</h1> 
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-3 mb-3 mb-md-5 text-center" *ngFor="let image of images">
+              <img [src]="image.src" [alt]="image.alt">
+              <div class="d-block pt-3">
+                <p class="font-weight-bold" style="padding-bottom: 20px; font-family: 'Buenos Aires';">{{ image.title }}</p>
+              </div>
+            </div>
+        </div>
+          
+    </div>
+  </div>
+  

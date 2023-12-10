@@ -1,0 +1,90 @@
+.footer {
+    padding: 24px 0;
+    background-color: rgb(40, 41, 121);
+    clip-path: polygon(0% 20%, 100% 0%, 100% 95%, 100% 100%, 0% 195%);
+  }
+  
+  .footer.footer-default {
+    background-color: #ece9f0;
+  }
+  
+  .footer nav {
+    display: inline-block;
+  }
+  
+  .footer ul {
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .footer ul li {
+    display: inline-block;
+  }
+  
+  .footer ul li a {
+    color: white;
+    padding: 0.5rem;
+    font-size: 0.8571em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  
+  .footer ul li a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer .copyright {
+    font-size: 0.8571em;
+  }
+  
+  .footer:after {
+    display: table;
+    clear: both;
+    content: " ";
+  }
+
+  /* Common Style */
+  .section {
+    padding-bottom: 0;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    padding-left: 100px;
+    padding-top: 50px;
+  }
+  
+  .address, .phone-numbers {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+    margin-bottom: 8px; /* Adjust as needed for spacing */
+  }
+  
+  .footer-content div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-content {
+    flex: 1;
+}
+
+.map {
+    flex: 1;
+    /* You can adjust width, height, or other properties as needed */
+    /* For instance, you might want to set a max-width for the map */
+    max-width: 400px;
+}
+
+ 
+  
+  

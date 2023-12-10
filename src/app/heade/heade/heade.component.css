@@ -1,0 +1,81 @@
+
+:host {
+  display: block;
+  /* padding: 4rem 2rem 6rem; */
+  padding-bottom: 3rem;
+  background: rgb(213, 39, 12);
+  font-family: 'Buenos Aires';
+  /* font-weight: bold; */
+  /* overflow-x: hidden; */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 110%, 0% 95%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 50rem; /* Adjust the gap between columns */
+  /* Center content vertically */
+}
+.containers {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 15rem; /* Adjust the gap between columns */
+  /* Center content vertically */
+}
+
+.name {
+  /* padding: 2rem; */
+  color: rgb(251, 253, 253);
+  font-size: 1.3rem;
+  font-weight: lighter;
+  /* margin-top: 3rem; */
+  /* font-family: 'Gilroy'; */
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start; /* Align the logo to the left */
+}
+
+.profile-bg {
+  /* Adjust the styles for the logo container */
+  width: 340px;
+  height: 140px;
+}
+.register-btn button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.register-btn button:hover {
+  background-color: #2980b9;
+}
+
+.popup-form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fefdfd;
+  border: 1px solid rgb(196, 193, 193);
+  z-index: 1;
+}
+
+.form-container {
+  max-width: 1900px;
+}
+
+.popup-form.show {
+  display: block; /* Displayed when the 'show' class is added */
+}

@@ -1,0 +1,27 @@
+/* Ensure the images fit in one row */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    background-color: white;
+    padding-left: 150px;
+    padding-right: 100px;
+    font-family: 'Buenos Aires';
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+  }
+  
+  /* Set dimensions for the images */
+  .container img {
+    width: 120px;
+    height: 128px;
+    background-color: white;
+    font-family: 'Buenos Aires';
+     /* Maintain aspect ratio */
+     /* Add space between images */
+  }
+  
+  /* Adjust if you want to remove margin for the last image */
+  /* .image-container img:last-child {
+    margin-right: 0;
+  }
+   */

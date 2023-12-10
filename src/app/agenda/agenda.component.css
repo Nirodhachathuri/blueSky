@@ -1,0 +1,37 @@
+
+    .card-3d-effect {
+        position: relative;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        width: 100%;
+        max-width: 500px; /* Set your desired maximum width */
+        margin: auto; /* Center the card */
+    }
+
+    .card-3d-effect:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-content {
+        text-align: left;
+        font-family: 'Buenos Aires';
+        
+    }
+
+    .card-title {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .card-text {
+        list-style-type: none;
+        padding-left: 20px;
+    }
+
+    .card-text li {
+        margin-bottom: 5px;
+    }
