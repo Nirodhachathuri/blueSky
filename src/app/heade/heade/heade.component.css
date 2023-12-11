@@ -1,29 +1,30 @@
 
 :host {
   display: block;
-  /* padding: 4rem 2rem 6rem; */
   padding-bottom: 3rem;
   background: rgb(213, 39, 12);
   font-family: 'Buenos Aires';
-  
-  /* font-weight: bold; */
-  /* overflow-x: hidden; */
   clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 110%, 0% 95%);
+  overflow: hidden;
+}
+.eventDetails{
+  font-family: 'Montserrat', 'Roboto', sans-serif;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns */
-  gap: 46rem; /* Adjust the gap between columns */
-  /* Center content vertically */
-}
 .containers {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns */
+  padding-top: 50px;
+  padding-left: 100px;
+  grid-template-columns: .5fr 1fr; /* Two columns */
   gap: 11rem; /* Adjust the gap between columns */
   /* Center content vertically */
 }
-
+.text img{
+  margin-left: -200px;
+  margin-top: 100px;
+}
+body{
+  overflow: hidden;
+}
 .name {
   /* padding: 2rem; */
   color: rgb(251, 253, 253);
@@ -79,4 +80,31 @@
 
 .popup-form.show {
   display: block; /* Displayed when the 'show' class is added */
+}
+
+@media (max-width: 768px) {
+  :host {
+    display: block;
+    /* padding: 4rem 2rem 6rem; */
+    padding-bottom: 3rem;
+    background: rgb(213, 39, 12);
+    font-family: 'Buenos Aires';
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 110%, 0% 100%);
+  }
+  
+  .containers{
+    padding-left: 40px;
+
+  }
+  span{
+    font-weight: large;
+  }
+  .text img{
+    width: 50%;
+  }
+  .text img{
+    padding-right: 100px;
+    margin-top: 100px;
+    margin-left: 0px;
+  }
 }

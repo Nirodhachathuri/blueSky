@@ -1,61 +1,69 @@
-<mat-card id="Home">
-    <mat-card-content class="row" style="width: 92%;">
-      <div class="container d-flex align-items-start" >
-        <div class="logo">
-          <div class="profile-bg">
-            <img src="../../assets/Bluesky-Immigration-Logo.svg" alt="">
-          </div>
-        </div>
-        <div class="name ml-3 mt-1">
-          <div style="text-align: center; font-weight: 20px;">Event Starts In</div>
-          <div style="font-size: small; text-align: center;">Days : Hours : Minutes : Seconds</div>
-          <div style="font-size: xx-large; text-align: center;">{{ days }} : {{ hours }} : {{ minutes }} : {{ seconds }}</div>
-
-        </div>
-      </div>
-      
-      
-      
-      <!-- Image Column -->  
-      <!-- Text Column -->
-    <div class="data d-flex align-items-center" style="margin-top: 100px; margin-left: 100px;" data-aos="fade-down">
-      <div class="containers ">
-        <span>
-          <span style="color: rgb(220, 234, 234); font-family: 'Buenos Aires'; font-size: x-large;margin-bottom: 300px;"> FREE </span> 
-          <span style="color: rgb(220, 234, 234); font-family: 'Buenos Aires';font-size: x-large;margin-top:300px;margin-bottom: 300px"> IELTS REALITY</span><br>
-          <span style="color: rgb(222, 244, 128); font-family: 'Buenos Aires';font-size: x-large;margin-top:300px;margin-bottom: 300px"> MOCK TEST</span><br>
-          <span style="color: rgb(220, 234, 234); font-family: 'Buenos Aires';font-size: x-large;margin-top:300px;margin-bottom: 300px;"> WITH MASTERY WORKSHOP</span><br>
-          <br><br><br><br>
-          <mat-icon style="color: rgb(232, 238, 238);">calendar_today</mat-icon> &nbsp;&nbsp;<!-- Calendar icon -->
-          <span style="color: rgb(228, 217, 217); font-size: x-large; font-family: 'Buenos Aires';"> Sun, 17<sup>th</sup> December 2023</span><br><br><br>
-          <span data-aos="fade-down">
-            <mat-icon style="color: rgb(249, 249, 251);">access_time</mat-icon>&nbsp;&nbsp; <!-- Clock icon -->
-            <span style="color: rgb(195, 185, 185);  font-family: 'Buenos Aires'; font-size: x-large;"> 10:00 am to 6:00 pm</span>
-          </span><br><br><br><br>
-          <span class="register-btn"><button (click)="toggleForm()">Register</button></span><br><br>
-        </span>
-        
-        <div class="text ml-3">
-          <img src="../../assets/images.avif" style="width: 500px;" alt="">
-        </div>
-      </div>
-
-    </div>
-    </mat-card-content>
-  </mat-card>
-
-  <div class="popup-form" *ngIf="showForm" style="display: block;">
-    <form (ngSubmit)="submitForm()" class="form-container">
-      <!-- Your form fields go here -->
-      <label for="username">First Name:</label>
-      <input type="text" id="username" name="username" required [(ngModel)]="formData.username"><br><br>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required [(ngModel)]="formData.email">
-      
-      <button type="submit" class="submit-btn">Submit</button>
-    </form>
+<div class="row">
+  <div class="containers col-md-8">
+    <span>
+      <span style="color: rgb(220, 234, 234); font-family: 'Buenos Aires'; font-size: xx-large;margin-bottom: 300px;">
+        Unlock Your Exam Success</span>
+      <br>
+      <span
+        style="color: rgb(222, 244, 128); font-family: 'Buenos Aires';font-size: xx-large;margin-top:300px;margin-bottom: 300px">
+        Free IELTS Mock Test and Mastery Workshop</span>
+      <!-- <span
+        style="color: rgb(220, 234, 234); font-family: 'Buenos Aires';font-size: large;margin-top:300px;margin-bottom: 300px;">
+        WITH <span style="font-size: xx-large;">MASTERY WORKSHOP</span> </span><br> -->
+      <br><br><br><br>
+      <mat-icon style="color: rgb(232, 238, 238);">calendar_today</mat-icon> <!-- Calendar icon -->
+      <span style="color: rgb(228, 217, 217); font-size: x-large; font-family: 'Buenos Aires';"> Sun, 17<sup>th</sup>
+        December 2023</span><br><br><br>
+      <span data-aos="fade-down">
+        <mat-icon style="color: rgb(249, 249, 251);">access_time</mat-icon><!-- Clock icon -->
+        <span style="color: rgb(195, 185, 185);  font-family: 'Buenos Aires'; font-size: x-large;"> 10:00 am to 6:00
+          pm</span>
+      </span><br><br><br><br>
+      <span class="register-btn"><button (click)="toggleForm()">Register</button></span><br><br>
+    </span>
   </div>
+  <div class="text col-md-4">
+    <img src="../../assets/images.avif" style="width: 500px;" alt="">
+  </div>
+</div>
 
-  
 
+<div class="popup-form" *ngIf="showForm" style="display: block;">
+  <form (ngSubmit)="submitForm()" class="form-container" novalidate>
+    <h2>Register for Free</h2>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="firstName">First Name:<span style="color: red;">*</span></label> <br>
+        <input type="text" id="firstName" name="firstName" style="width: 350px;" required
+          [(ngModel)]="formData.firstName">
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name:<span style="color: red;">*</span></label><br>
+        <input type="text" id="lastName" name="lastName" style="width: 350px;" required [(ngModel)]="formData.lastName">
+      </div>
+
+      <div class="form-group">
+        <label for="contactNumber">Contact Number:<span style="color: red;">*</span></label><br>
+        <input type="tel" id="contactNumber" name="contactNumber" style="width: 550px;" required
+          [(ngModel)]="formData.contactNumber">
+      </div><br>
+
+      <div class="form-group">
+        <label for="email">Email:<span style="color: red;">*</span></label><br>
+        <input type="email" id="email" name="email" style="width: 550px;" required [(ngModel)]="formData.email">
+      </div>
+
+      <div class="form-group-full">
+        <label for="message">Message:<span style="color: red;">*</span></label><br>
+        <textarea id="message" name="message" rows="4" cols="80" [(ngModel)]="formData.message"></textarea>
+      </div>
+    </div>
+
+    <div *ngIf="formSubmitted && !isFormValid()" style="color: red;" class="error-message">Please fill in all required
+      fields.</div>
+
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</div>

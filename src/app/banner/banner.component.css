@@ -1,0 +1,39 @@
+.row {
+    background-color: rgb(213, 39, 12);
+    overflow: hidden;
+    font-family: 'Buenos Aires';
+    padding-left: 90px;
+}
+
+.countdown {
+    padding-left: 80px;
+    text-align: center;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.logo {
+   
+    padding-right: 470px;
+    /* Align the logo to the left */
+}
+
+@media (max-width: 768px) {
+    .row {
+        background-color: rgb(254, 252, 251);
+        font-family: 'Buenos Aires';
+        padding-left: 0;
+    }
+    .countdown {
+        color: rgb(8, 19, 28);
+        /* overflow: hidden; */
+        padding: 0;
+        /* Remove padding */
+        text-align: center;
+        /* Keep the text centered */
+        /* Center the countdown horizontally */
+    }
+    .logo{
+        padding-right: 0;
+    }
+}

@@ -35,9 +35,14 @@ export class HeadeComponent implements OnInit {
   }
 
     showForm: boolean = false;
+    formSubmitted: boolean = false;
     formData = {
-      username: '',
-      email: ''
+      firstName: '',
+      lastName: '',
+      email:'',
+      contactNumber:'',
+      message:''
+
     };
 
     toggleForm() {
@@ -46,11 +51,18 @@ export class HeadeComponent implements OnInit {
     }
 
     submitForm() {
-      console.log('Form submitted:', this.formData);
-      // Here you can handle form submission logic (e.g., send data to a server)
-      // Reset the form or perform other actions after submission
-      this.showForm = false; // Hide the form after submission
-      this.formData = { username: '', email: '' }; // Reset form data
+      this.formSubmitted = true; 
+      if (this.isFormValid()) {
+        console.log('Form submitted:', this.formData);
+        // Here you can handle form submission logic (e.g., send data to a server)
+        // Reset the form or perform other actions after submission
+        this.showForm = false; // Hide the form after submission
+        this.formData = { firstName: '', lastName: '', email:'', contactNumber:'', message:'' }; // Reset form data
+      }
     }
-
+  
+    isFormValid(): boolean {
+      // Check if any required field is empty
+      return !!this.formData.firstName && !!this.formData.lastName && !!this.formData.email && !!this.formData.contactNumber;
+    }
 }

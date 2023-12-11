@@ -29,7 +29,7 @@
 
     .card-text {
         list-style-type: none;
-        padding-left: 20px;
+        /* padding-left: 20px; */
     }
 
     .card-text li {

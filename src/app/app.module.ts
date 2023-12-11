@@ -25,6 +25,7 @@ import { BenefitsComponent } from './benefits/benefits.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { ScreenComponent } from './screen/screen.component';
 import { StickyDirective } from './sticky.directive';
+import { BannerComponent } from './banner/banner.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { StickyDirective } from './sticky.directive';
     AgendaComponent,
     ScreenComponent,
     StickyDirective,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,
